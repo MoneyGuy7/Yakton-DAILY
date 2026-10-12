@@ -5,7 +5,7 @@ A modular, lightweight daily puzzle platform designed for Cloudflare Workers and
 ## Included
 
 - Crawlable, separate HTML pages for the home page, game directory, six puzzle experiences, how-to-play, about, and privacy.
-- Number Logic, Memory Grid, Pattern Finder, Quick Math, Word Logic, and a combined Daily Challenge.
+- Seven daily games (Number Logic, Pattern Finder, Quick Math, Word Logic, Memory Grid, Odd Tile, Lights Out) with procedurally generated puzzles, plus a Daily Challenge that plays four rotating games inline. Run `npm run build` after editing the game registry to regenerate pages.
 - Deterministic, versioned UTC daily puzzle selection.
 - Local streaks, best streak, completion history, and personal records.
 - Shareable text results with clipboard and Web Share API support where available.
@@ -52,7 +52,7 @@ For GitHub-based deployment, configure a GitHub Actions workflow with Cloudflare
 
 ## Daily puzzle integrity
 
-Daily seeds use UTC dates and a versioned hash. All players get the same puzzle inputs for a given UTC date and algorithm version. Since this is a static client-side puzzle platform, puzzle answers are not suitable for high-stakes competitions: client-side puzzle logic can be inspected. The optional Worker API exposes the current UTC date, but this starter does not implement a leaderboard or claim anti-cheat security.
+Daily seeds use UTC dates and a versioned hash. All players get the same puzzle inputs for a given UTC date and algorithm version (currently 2). Since this is a static client-side puzzle platform, puzzle answers are not suitable for high-stakes competitions: client-side puzzle logic can be inspected. The optional Worker API exposes the current UTC date, but this starter does not implement a leaderboard or claim anti-cheat security.
 
 ## Data and privacy
 

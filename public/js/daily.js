@@ -1,4 +1,4 @@
-export const ALGORITHM_VERSION = 1;
+export const ALGORITHM_VERSION = 2;
 export function hashSeed(input) {
   let h = 2166136261;
   for (let i = 0; i < input.length; i++) {
